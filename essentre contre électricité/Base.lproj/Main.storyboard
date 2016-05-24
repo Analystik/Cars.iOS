@@ -1,78 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yf1-MT-o3v">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="essentre_contre_e_lectricite_" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwS-cA-EfQ">
-                                <rect key="frame" x="79" y="692" width="256" height="34"/>
-                                <color key="backgroundColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="wE4-h2-2Ma"/>
-                                    <constraint firstAttribute="width" constant="256" id="zdR-MB-rCr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Continuer">
-                                    <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Yf1-MT-o3v" kind="show" id="dfR-H1-IJ8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avertissement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ECr-No-OIv">
-                                <rect key="frame" x="83" y="55" width="248" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-hE-WNE">
-                                <rect key="frame" x="36" y="115" width="342" height="219"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="219" id="WPg-bm-PYr"/>
-                                </constraints>
-                                <string key="text">Cette application n’ est qu'à titre indicatif seulement.
-
-Toutes les informations devraient être validées avant de faire votre achat.
-
-Aussi, le prix de l’essence, le prix de remplacement des batteries, les subventions et le prix de l'électricité peut varier et affecter le résultat final.</string>
-                                <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ECr-No-OIv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5KC-Wc-06H"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="CwS-cA-EfQ" secondAttribute="bottom" constant="10" id="Acb-Ee-KD6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lP4-hE-WNE" secondAttribute="trailing" constant="16" id="DTi-tb-doy"/>
-                            <constraint firstItem="lP4-hE-WNE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="Ghg-LC-dV4"/>
-                            <constraint firstItem="lP4-hE-WNE" firstAttribute="top" secondItem="ECr-No-OIv" secondAttribute="bottom" constant="17" id="eJ7-iX-tY5"/>
-                            <constraint firstItem="ECr-No-OIv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="gqe-S6-0ma"/>
-                            <constraint firstItem="CwS-cA-EfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zIt-EZ-x7E"/>
-                        </constraints>
-                    </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-251" y="355"/>
-        </scene>
         <!--Essence contre électricité-->
         <scene sceneID="mdz-kU-K6O">
             <objects>

@@ -28,6 +28,7 @@ class form_page: UIViewController  {
 		// obtient la valeur du slider
 		// associe la valeur au label
 		// affiche le bouton
+		// fin de la frame
 	
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		let currentValue = Int(sender.value);

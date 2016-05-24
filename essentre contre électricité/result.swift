@@ -29,6 +29,7 @@ class result: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
 
 		//connection a database
+		// chnager le layout
 		
 		// entrer les variable
 		

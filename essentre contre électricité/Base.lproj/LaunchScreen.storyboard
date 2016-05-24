@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="width" secondItem="BWt-is-D84" secondAttribute="height" multiplier="124:13" id="CzZ-cp-MlX"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auto_splash" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-wV-OIE">
-                                <rect key="frame" x="61" y="212" width="198" height="67"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="auto_splash" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-wV-OIE">
+                                <rect key="frame" x="61" y="207" width="198" height="67"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
