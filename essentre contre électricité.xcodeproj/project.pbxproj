@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		501BF0891CEE556F001C111E /* result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BF0881CEE556F001C111E /* result.swift */; };
 		503B124C1CECFEF600C1AFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503B124A1CECFEF600C1AFAD /* Main.storyboard */; };
+		5062E4E31CF4DCA000B60E98 /* apiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5062E4E21CF4DCA000B60E98 /* apiResult.swift */; };
+		5062E4E51CF4E41500B60E98 /* PVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5062E4E41CF4E41500B60E98 /* PVController.swift */; };
 		50AF94D11CEB720000C31489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF94D01CEB720000C31489 /* AppDelegate.swift */; };
 		50AF94D31CEB720000C31489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF94D21CEB720000C31489 /* ViewController.swift */; };
 		50AF94D81CEB720000C31489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AF94D71CEB720000C31489 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		501BF0881CEE556F001C111E /* result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = result.swift; sourceTree = "<group>"; };
 		503B124B1CECFEF600C1AFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5062E4E21CF4DCA000B60E98 /* apiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = apiResult.swift; path = ../apiResult.swift; sourceTree = "<group>"; };
+		5062E4E41CF4E41500B60E98 /* PVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PVController.swift; path = ../PVController.swift; sourceTree = "<group>"; };
 		50AF94CD1CEB720000C31489 /* essentre contre électricité.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "essentre contre électricité.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AF94D01CEB720000C31489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AF94D21CEB720000C31489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		50AF94CF1CEB720000C31489 /* essentre contre électricité */ = {
 			isa = PBXGroup;
 			children = (
+				5062E4E41CF4E41500B60E98 /* PVController.swift */,
+				5062E4E21CF4DCA000B60E98 /* apiResult.swift */,
 				50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */,
 				503B124A1CECFEF600C1AFAD /* Main.storyboard */,
 				50AF94D01CEB720000C31489 /* AppDelegate.swift */,
@@ -146,10 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CD2C831CEF85EC00CAEC35 /* PVclassViewController.swift in Sources */,
+				5062E4E31CF4DCA000B60E98 /* apiResult.swift in Sources */,
 				50B42BD31CECAD2600D8C539 /* form_page.swift in Sources */,
 				50AF94D31CEB720000C31489 /* ViewController.swift in Sources */,
 				501BF0891CEE556F001C111E /* result.swift in Sources */,
 				50AF94D11CEB720000C31489 /* AppDelegate.swift in Sources */,
+				5062E4E51CF4E41500B60E98 /* PVController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

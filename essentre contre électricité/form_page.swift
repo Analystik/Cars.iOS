@@ -11,8 +11,12 @@ import UIKit
 class form_page: UIViewController  {
 	
 	var gestionUIclass: PVclassViewController!
-	// tout des éléments du storyboard
+	// gestion du data
+	var api: ApiResult!
+
 	
+	// tout des éléments du storyboard
+
 	@IBOutlet var dropdown: UIPickerView!
 	@IBOutlet var resultMarque: UITextField!
 	@IBOutlet var resultModel: UITextField!
@@ -35,6 +39,7 @@ class form_page: UIViewController  {
 		resultKmYear.text = "\(currentValue)"+"km";
 		button.hidden = false
 	}
+	
 
 	
     override func viewDidLoad() {
@@ -42,7 +47,6 @@ class form_page: UIViewController  {
 		gestionUIclass = PVclassViewController()
 		gestionUIclass.setui(self)
 		
-	//	gestionUIclass.getApiResult("https://secure.bixi.com/data/stations.json")
 		
 	
 	

@@ -8,26 +8,32 @@
 
 import UIKit
 
-class PVclassViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate, UITextFieldDelegate {
+
+
+
+
+class PVclassViewController: UIViewController, UITextFieldDelegate {
 
 	//@IBOutlet var newdropdown: UIPickerView!
 	var newUi:form_page = form_page()
-	var arrayPicker:Array = ["Ford", "Mercedes", "Nissan", "GM"];
 	var activeTextfield:Int = 1;
+	let PVControl:PVController = PVController(containt: [])
+
 
 	
-func setui(ui: form_page){
+	func setui(ui: form_page){
+	
 		
 		newUi=ui
 		
-		newUi.dropdown.delegate = self;
-		newUi.dropdown.dataSource = self;
+		newUi.dropdown.delegate = PVControl;
+		newUi.dropdown.dataSource = PVControl
 		newUi.dropdown.hidden = true;
 		newUi.resultMarque.delegate = self;
 		newUi.resultModel.delegate = self;
 		newUi.resultYear.delegate = self;
 		newUi.resultProvince.delegate = self;
-		newUi.resultMarque.text = arrayPicker[0];
+//		newUi.resultMarque.text = arrayPicker[0];
 	}
 	
 	
@@ -49,31 +55,9 @@ func setui(ui: form_page){
 	
 	
 	
-	// donne le nombre de colonne du pickerview
-	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-		return 1
-	}
-	
-	
-	// donne le nombre de ranger du pickerview
-	func pickerView(pickerView: UIPickerView,numberOfRowsInComponent: Int) -> Int{
-		return arrayPicker.count
-	}
-	
-	//associe les titre au pickerview
-	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-		return arrayPicker[row]
-		
-	}
+	//newUi.view.viewWithTag(activeTextfield) as? UITextField
 
-	// associe le choix du pickerview au textfield
-	// cache le pickerview
-	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-		let curtfield = newUi.view.viewWithTag(activeTextfield) as? UITextField
-		curtfield!.text = arrayPicker[row]
-		newUi.dropdown.hidden = true;
-	}
-	
+
 	
 	// lorsque l'on click sur un textefill
 	// trouve le textfield cliqué selon le tag
@@ -87,29 +71,24 @@ func setui(ui: form_page){
 	//ouvre le pickerView
 	
 	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-		activeTextfield = textField.tag;
+	
+		let Api:ApiResult = ApiResult()
 		
-		if activeTextfield == 1{
-			arrayPicker.removeAll();
-			arrayPicker = []
-			newUi.dropdown.reloadAllComponents();
-		}
-		else if activeTextfield == 2{
-			arrayPicker.removeAll();
-			arrayPicker = []
-			newUi.dropdown.reloadAllComponents();
-		}
-		else if activeTextfield == 3{
-			arrayPicker.removeAll();
-			arrayPicker = []
-			newUi.dropdown.reloadAllComponents();
-		}
-		else if activeTextfield == 4{
-			arrayPicker.removeAll();
-			arrayPicker = []
-			newUi.dropdown.reloadAllComponents();
+		switch textField.tag {
+			case 1:
+				PVControl.modifyContaint(textField, containt: Api.getMakers())
+			case 2:
+				PVControl.modifyContaint(textField, containt: Api.getModels())
+			case 3:
+				PVControl.modifyContaint(textField, containt: Api.getCars())
+			case 4:
+				PVControl.modifyContaint(textField, containt: Api.getProvinces())
+			default:
+				PVControl.modifyContaint(textField, containt: [])
 		}
 		
+		
+		newUi.dropdown.reloadAllComponents();
 		newUi.dropdown.hidden = false
 		return false
 		
