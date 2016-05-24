@@ -42,7 +42,7 @@ class form_page: UIViewController  {
 		gestionUIclass = PVclassViewController()
 		gestionUIclass.setui(self)
 		
-		gestionUIclass.getApiResult("https://secure.bixi.com/data/stations.json")
+	//	gestionUIclass.getApiResult("https://secure.bixi.com/data/stations.json")
 		
 	
 	

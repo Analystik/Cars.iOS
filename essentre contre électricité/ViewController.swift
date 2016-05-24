@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let postEndpoint: String = "https://secure.bixi.com/data/stations.json"
+		/*let postEndpoint: String = "https://secure.bixi.com/data/stations.json"
 		
 		let url = NSURL(string: postEndpoint)!
 		
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 			
 			
 		}).resume()
-		
+		*/
 		
 	}
 

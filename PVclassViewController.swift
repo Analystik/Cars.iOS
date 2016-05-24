@@ -115,63 +115,7 @@ func setui(ui: form_page){
 		
 	}
 	
-/*	func getApiResult(url:String){
-		let newurl = NSURL(string: url);
-		
-		let task = NSURLSession.sharedSession().dataTaskWithURL(newurl!) {(data, response, error) -> Void in
-			// will happen when task completes
-			
-			if let URLContent = data{
-				
-				let webContent = NSString(data: URLContent, encoding: NSUTF8StringEncoding)
-				
-				print(webContent)
-				
-				
-			} else {
-				
-			}
-			
-			
-		}
-		
-		task.resume()
-		
-
-	}*/
-
 	
-	func getApiResult(url:String){
-		let newurl = NSURL(string: url);
-		
-	/*	 let task = NSURLSession.sharedSession().dataTaskWithURL(newurl!) {(data, response, error) -> Void in
-			// will happen when task completes
-			
-			if let URLContent = data{
-				
-				do{
-					
-				let webContent = try NSJSONSerialization.JSONObjectWithData(URLContent, options: .AllowFragments)
-			//	if let stations = json["stations"] as? [[String:AnyObject]]{
-				
-					for stations in stations{
-						if let s = stations["s"] as? String{
-							arrayPicker.append(s)
-						}
-					}
-				}
-				
-			}catch {
-				print("error!")
-			}
-			}
-		}
-
-		task.resume()
-		
-	*/
-	}
-
 
 		
 		

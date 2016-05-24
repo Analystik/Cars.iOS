@@ -31,7 +31,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-2q-jiW">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choisissez une marque" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kI9-2q-jiW">
                                 <rect key="frame" x="38" y="126" width="365" height="17"/>
                                 <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -55,7 +55,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjj-Yh-IIN">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choisissez un modèle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjj-Yh-IIN">
                                 <rect key="frame" x="34" y="199" width="365" height="17"/>
                                 <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -70,7 +70,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xl4-iq-Ik3">
+                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choisissez une année" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xl4-iq-Ik3">
                                 <rect key="frame" x="34" y="279" width="365" height="17"/>
                                 <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="23" id="iZw-xU-cgk"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-HY-B6T">
+                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choisissez votre province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-HY-B6T">
                                 <rect key="frame" x="34" y="352" width="365" height="17"/>
                                 <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -148,14 +148,6 @@
                                     <segue destination="y6Q-rM-a4w" kind="show" id="ePh-Oo-376"/>
                                 </connections>
                             </button>
-                            <pickerView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBM-Hm-QcD">
-                                <rect key="frame" x="0.0" y="576" width="414" height="160"/>
-                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="Y6e-aH-IUy"/>
-                                </constraints>
-                            </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-kq-D2O">
                                 <rect key="frame" x="376" y="226" width="23" height="20"/>
                                 <constraints>
@@ -165,15 +157,27 @@
                                     <constraint firstAttribute="height" constant="20" id="oLb-lv-5oi"/>
                                 </constraints>
                             </imageView>
+                            <pickerView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBM-Hm-QcD">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="672" id="SyY-74-xAi"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DTb-Ny-rmk" firstAttribute="top" secondItem="bjj-Yh-IIN" secondAttribute="bottom" constant="34" id="0r6-t1-gZZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aBM-Hm-QcD" secondAttribute="trailing" constant="-20" id="1kC-bz-yuR"/>
                             <constraint firstItem="D9D-Bk-IRR" firstAttribute="top" secondItem="xl4-iq-Ik3" secondAttribute="bottom" constant="8" id="1uI-wc-6KL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7HT-Jw-ped" secondAttribute="trailing" constant="-5" id="3Bl-e8-Kt1"/>
+                            <constraint firstItem="jk2-DY-RYG" firstAttribute="top" secondItem="aBM-Hm-QcD" secondAttribute="bottom" id="6KX-UX-CtC"/>
                             <constraint firstItem="5h4-kq-D2O" firstAttribute="top" secondItem="bjj-Yh-IIN" secondAttribute="bottom" constant="10" id="6r2-Kh-2xG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bjj-Yh-IIN" secondAttribute="trailing" constant="-5" id="Aka-Xp-sFU"/>
                             <constraint firstItem="7Kc-dq-9Xi" firstAttribute="top" secondItem="uW8-4d-8Ou" secondAttribute="bottom" constant="17" id="B4p-cf-JRL"/>
+                            <constraint firstItem="aBM-Hm-QcD" firstAttribute="leading" secondItem="u5C-Ic-nr3" secondAttribute="leadingMargin" constant="-20" id="C1Y-my-PHS"/>
+                            <constraint firstItem="aBM-Hm-QcD" firstAttribute="top" secondItem="3cP-0L-9i2" secondAttribute="bottom" id="Cxg-xt-l9c"/>
                             <constraint firstItem="zE1-vT-aRz" firstAttribute="leading" secondItem="u5C-Ic-nr3" secondAttribute="leadingMargin" id="FwS-Cr-vXG"/>
                             <constraint firstItem="uW8-4d-8Ou" firstAttribute="top" secondItem="FoN-HY-B6T" secondAttribute="bottom" constant="37" id="HMO-fm-aR6"/>
                             <constraint firstItem="8Yb-bD-wWF" firstAttribute="top" secondItem="3cP-0L-9i2" secondAttribute="bottom" constant="33" id="JAI-ee-vJO"/>
