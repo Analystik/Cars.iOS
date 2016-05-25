@@ -22,17 +22,669 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485893874.523488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ApiResult"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485901352.065334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485900260.184284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485893875.578032"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "442">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485893875.57823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "getMakers()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVController.swift"
+            timestampString = "485884652.631287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "PVController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.PVController.containt.getter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/PVController.swift"
+                  timestampString = "485890568.157427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.PVController.containt.setter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/PVController.swift"
+                  timestampString = "485890568.157558"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "153">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVController.swift"
+            timestampString = "485884670.054292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(containt:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PVController.swift"
-            timestampString = "485817135.940891"
+            timestampString = "485892129.553764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getValuebykey(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVController.swift"
+            timestampString = "485902548.829688"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485893276.491608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ApiResult"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898642.066206"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898642.066304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2250">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485896349.277986"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.__deallocating_deinit"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485897268.239146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "9">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.deinit"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485897268.239256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.init () -&gt; essentre_contre_e_lectricite_.ApiResult"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485897268.239347"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898251.663932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898251.664142"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "2250">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "ApiConnection(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898251.001563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "519">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.ApiResult.(ApiConnection (Swift.String) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;).(closure #1)"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/apiResult.swift"
+                  timestampString = "485898251.001767"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1974">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVController.swift"
+            timestampString = "485898454.020987"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "modifyContaint(_:containt:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVController.swift"
+            timestampString = "485898454.346346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "modifyContaint(_:containt:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getMakers()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkName = "ApiConnection(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getModels(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485903949.387466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "getModels(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVclassViewController.swift"
+            timestampString = "485906183.874474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "textFieldShouldBeginEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apiResult.swift"
+            timestampString = "485904663.97412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "getCars(_:modelid:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVclassViewController.swift"
+            timestampString = "485906183.874474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "textFieldShouldBeginEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVclassViewController.swift"
+            timestampString = "485906183.874474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "textFieldShouldBeginEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PVclassViewController.swift"
+            timestampString = "485906157.532632"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "PVclassViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.PVclassViewController.__deallocating_deinit"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/PVclassViewController.swift"
+                  timestampString = "485906184.942753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.PVclassViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; essentre_contre_e_lectricite_.PVclassViewController"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/PVclassViewController.swift"
+                  timestampString = "485906184.942918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "essentre_contre_e_lectricite_.PVclassViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;essentre_contre_e_lectricite_.PVclassViewController&gt;"
+                  moduleName = "essentre contre e&#x301;lectricite&#x301;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Max/Documents/job%20/analystik/essence%20contre%20e%CC%81lectricite%CC%81%20app/essentre%20contre%20e%CC%81lectricite%CC%81/PVclassViewController.swift"
+                  timestampString = "485906184.943053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
