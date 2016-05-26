@@ -13,19 +13,49 @@ class form_page: UIViewController  {
 	var gestionUIclass: PVclassViewController!
 	// gestion du data
 	var api: ApiResult!
+	var pvcontrol:mydropdownControl = mydropdownControl(containt:Array<AnyObject>())
+
 
 	
 	// tout des éléments du storyboard
 
+	@IBOutlet var btnMarque: UIButton!
+	@IBAction func btnMarqueClick(sender: UIButton) {
+		
+		pvcontrol.modifyContaint(btnMarque, containt: gestionUIclass.arrtMarque)
+		pvcontrol.showPickerview(dropdown)
+		btnMarque.setTitle(pvcontrol.getTitle(), forState: UIControlState.Normal)
+		btnModele.setTitle("Choisir un modèle", forState: UIControlState.Normal)
+		btnYear.setTitle("Choisir une année", forState: UIControlState.Normal)
+
+		
+	}
+	
+	@IBOutlet var btnModele: UIButton!
+	
+	@IBAction func btnModeleClick(sender: UIButton) {
+	}
+	
+	
+	@IBOutlet var btnYear: UIButton!
+	@IBAction func btnYearClick(sender: UIButton) {
+		
+	}
+	
+	@IBOutlet var btnProvince: UIButton!
+	@IBAction func btnProvinceClick(sender: UIButton!) {
+		
+	}
+	
+	
+	
+	
 	@IBOutlet var dropdown: UIPickerView!
-	@IBOutlet var resultModel: UITextField!
-	@IBOutlet var resultMarque: UITextField!
-	@IBOutlet var resultYear: UITextField!
-	@IBOutlet var resultProvince: UITextField!
 	@IBOutlet var resultKmYear: UILabel!
+	@IBOutlet var SliderKmYear: UISlider!
+	
 	
 	@IBOutlet var button: UIButton!
-	@IBOutlet var SliderKmYear: UISlider!
 	
 	
 	// fonction du slider
@@ -37,10 +67,17 @@ class form_page: UIViewController  {
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		let currentValue = Int(sender.value);
 		resultKmYear.text = "\(currentValue)"+"km";
-		if resultMarque.text != "Choisissez une marque" && resultModel.text != "Choisissez un modèle" && resultYear.text != "Choisissez une année" && resultProvince.text != "Choisissez votre province"
-		{
-		button.hidden = false
-		}
+		
+		
+	//	resultMarque.setTitle("Test", forState: UIControlState.Normal  )
+		
+		
+		
+		
+//		if btnMarque.curent != "Choisissez une marque" && btnModel.text != "Choisissez un modèle" && btnYear.text != "Choisissez une année" && btnProvince.text != "Choisissez votre province"
+//		{
+//		button.hidden = false
+//		}
 		
 		
 	}

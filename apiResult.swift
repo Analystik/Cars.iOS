@@ -10,29 +10,18 @@ import Foundation
 
 class ApiResult {
 	
-	func ApiConnection(url:String) -> Dictionary<String, String>{
+	func ApiConnection(url:String) -> NSArray{
 		let newurl = NSURL(string: url)!
 		let session = NSURLSession.sharedSession()
-		var jsonDictionary:Dictionary<String, String> = [:]
 		let semaphore = dispatch_semaphore_create(0)
+		var jsonArray = []
 	
 		session.dataTaskWithURL(newurl, completionHandler: { (data, response, error) -> Void in
 			do{
 				if let webdata = NSString(data:data!, encoding: NSUTF8StringEncoding) {
-					let jsonArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+					jsonArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
 					
-					for obj in jsonArray {
-						var k = String(obj.valueForKey("Id")!)
-						var v:String
-						
-						if obj.valueForKey("Name") != nil {
-							v = String(obj.valueForKey("Name")!)
-						} else {
-							v = String(obj.valueForKey("Year4Digits")!)
-						}
-						
-						jsonDictionary[k] = v
-					}
+					
 				}
 				
 			} catch {
@@ -46,11 +35,11 @@ class ApiResult {
 		
 		 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
 		
-		return jsonDictionary
+		return jsonArray
 	}
 	
 // to test
-	
+
 	
 	
 	func ApiPost(){
@@ -91,12 +80,25 @@ class ApiResult {
 	
 	
 	
-	func getMakers() -> Dictionary<String, String> {
+	func getMakers() -> Array<Make> {
 		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes")
-		return connection
+		var result:Array<Make> = []
+		print(connection)
+		
+		for obj in connection {
+			let marque = Make(id: (obj.valueForKey("Id") as? Int)!, name: (obj.valueForKey("Name") as? String)!)
+			result.append(marque)
+		}
+		
+		return result
 	}
+	
 
-	func getModels(makerid:String)-> Dictionary<String, String> {
+	
+	
+	
+
+	/*func getModels(makerid:String)-> Dictionary<String, String> {
 		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes/" + makerid + "/models")
 		return connection
 	}
@@ -109,5 +111,5 @@ class ApiResult {
 	func getProvinces()-> Dictionary<String,String> {
 		let connection = ApiConnection("http://cars101.azurewebsites.net/api/provinces")
 		return connection
-	}
+	}*/
 }

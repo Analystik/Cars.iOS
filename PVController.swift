@@ -9,37 +9,52 @@
 import Foundation
 import UIKit
 
-class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
+class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 	
-	var containt:Dictionary<String, String>
-	var textbox:UITextField
+	var containt:Array<AnyObject>
+	var button:UIButton
+	var titleBtn:String = ""
+	var titletag:String = ""
 	
-	init(containt: Dictionary<String, String>){
+	init(containt: Array<AnyObject>){
 		self.containt = containt
-		self.textbox = UITextField()
+		self.button = UIButton()
 	}
 
-	//useless
-	/*func getValueByKey(key:String) -> String {
-		let index = self.containt.indexForKey(key)
-		return self.containt.values[index!]
-	}*/
-	
-	func getKeyByValue(value:String) -> String {
-		for (k, v) in self.containt {
-			if v == value {
-				return k
-			}
-		}
-		return "not found"
-	}
-	
-	func modifyContaint(textbox: UITextField,containt: Dictionary<String, String>){
+	func modifyContaint(button: UIButton, containt: Array<Make>){
+		print(containt)
+
 		self.containt = containt
-		self.textbox = textbox
+
+		
+		self.button = button
+		self.titletag = "Name"
 	}
 	
+	func modifyContaint(button: UIButton,containt: Array<Model>){
+		self.containt = containt
+		self.button = button
+		self.titletag = "Name"
+
+	}
 	
+	func modifyContaint(button: UIButton,containt: Array<Car>){
+		self.containt = containt
+		self.button = button
+		self.titletag = "Year4Digits"
+
+	}
+	
+	func modifyContaint(button: UIButton,containt: Array<Province>){
+		self.containt = containt
+		self.button = button
+		self.titletag = "Name"
+
+	}
+	
+	func getTitle() -> String?{
+		return titleBtn;
+	}
 	
 	
 	
@@ -50,29 +65,30 @@ class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 	
 	// donne le nombre de ranger du pickerview
 	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		print(self.containt.count)
 		return self.containt.count
 	}
 	
 	//associe les titre au pickerview
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-		var arrayforTitle:[String]{
-			get{
-				return Array(self.containt.values)
-			}
-		}
-		return  arrayforTitle[row]
+		print("totou")
+		print(self.containt[row])
+		return self.containt[row].titletag
+		
 	}
 	
 	// associe le choix du pickerview au textfield
 	// cache le pickerview
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-		var arrayforTitle:[String]{
-			get{
-				return Array(self.containt.values)
-			}
-		}
-		self.textbox.text = arrayforTitle[row]
-		
+		titleBtn = self.containt[row].titletag
 		pickerView.hidden = true;
 	}
+	
+	func showPickerview(pickerView:UIPickerView){
+		pickerView.reloadAllComponents();
+		pickerView.hidden = false;
+	}
+
+	
+	
 }

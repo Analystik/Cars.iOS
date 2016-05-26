@@ -9,22 +9,31 @@
 import UIKit
 
 class PVclassViewController: UIViewController, UITextFieldDelegate {
-
-	//@IBOutlet var newdropdown: UIPickerView!
-	var newUi:form_page = form_page()
-//	var activeTextfield:Int = 1;
-	let PVControl:PVController = PVController(containt: [:])
 	
+
+	var arrtMarque:Array<Make> = []
+	var arrtModel:Array<Model> = []
+	var arrtYear:Array<Car> = []
+	var arrtProvince:Array<Province> = []
+	
+	var PVControl:mydropdownControl = mydropdownControl(containt:Array<AnyObject>())
 	let Api:ApiResult = ApiResult()
+	var newUi:form_page = form_page()
 
 	
-	var dictMarque:Dictionary<String, String> = [:]
-	
-	var dictModel:Dictionary<String, String> = [:]
-	
-	var dictYear:Dictionary<String, String> = [:]
-	
-	var dictPro:Dictionary<String, String> = [:]
+	func setui(ui: form_page){
+		
+		newUi=ui
+		
+		newUi.dropdown.delegate = PVControl;
+		newUi.dropdown.dataSource = PVControl
+		newUi.dropdown.hidden = true;
+		
+		arrtMarque = Api.getMakers()
+	//	arrtProvince = Api.getProvinces()
+	}
+
+
 	
 	var marqueID:String = "";
 	var modelID:String = "";
@@ -32,22 +41,6 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 
 
 	
-	func setui(ui: form_page){
-	
-		newUi=ui
-		
-		newUi.dropdown.delegate = PVControl;
-		newUi.dropdown.dataSource = PVControl
-		newUi.dropdown.hidden = true;
-		newUi.resultMarque.delegate = self;
-		newUi.resultModel.delegate = self;
-		newUi.resultYear.delegate = self;
-		newUi.resultProvince.delegate = self;
-		
-		
-		dictMarque = Api.getMakers()
-		dictPro = Api.getProvinces()
-	}
 	
 	
 	override func viewDidLoad() {
@@ -76,7 +69,8 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 	
 	
 	
-	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+	
+/*	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
 		
 		
 		
@@ -112,7 +106,7 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 		return false
 		
 	}
-	
+	*/
 	
 
 		
