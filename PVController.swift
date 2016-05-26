@@ -18,14 +18,14 @@ class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 		self.containt = containt
 		self.textbox = UITextField()
 	}
-	
-	func getValuebykey(key:String) -> String {
+
+	//useless
+	/*func getValueByKey(key:String) -> String {
 		let index = self.containt.indexForKey(key)
 		return self.containt.values[index!]
-	}
+	}*/
 	
-	func getKeybyValue(value:String) -> String {
-		
+	func getKeyByValue(value:String) -> String {
 		for (k, v) in self.containt {
 			if v == value {
 				return k
@@ -34,13 +34,19 @@ class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 		return "not found"
 	}
 	
-		
+	func modifyContaint(textbox: UITextField,containt: Dictionary<String, String>){
+		self.containt = containt
+		self.textbox = textbox
+	}
+	
+	
+	
+	
 	
 	// donne le nombre de colonne du pickerview
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
 		return 1
 	}
-	
 	
 	// donne le nombre de ranger du pickerview
 	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -55,15 +61,6 @@ class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 			}
 		}
 		return  arrayforTitle[row]
-		
-	}
-	
-	func modifyContaint(textbox: UITextField,containt: Dictionary<String, String>){
-			//self.containt.removeAll();
-			print(self.containt);
-			self.containt = containt
-			self.textbox = textbox
-
 	}
 	
 	// associe le choix du pickerview au textfield
@@ -73,13 +70,9 @@ class PVController: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 			get{
 				return Array(self.containt.values)
 			}
-			
 		}
 		self.textbox.text = arrayforTitle[row]
 		
 		pickerView.hidden = true;
 	}
-
-	
-	
 }

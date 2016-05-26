@@ -36,9 +36,6 @@
                                 <color key="textColor" red="0.12629881501197815" green="0.75626367330551147" blue="0.082062311470508575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="u5C-Ic-nr3" id="uHt-Cj-bxQ"/>
-                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="model" translatesAutoresizingMaskIntoConstraints="NO" id="d82-02-bEL">
                                 <rect key="frame" x="376" y="151" width="23" height="20"/>
@@ -228,7 +225,7 @@
                         <outlet property="button" destination="en4-Zz-aZw" id="qA7-Ku-GuP"/>
                         <outlet property="dropdown" destination="aBM-Hm-QcD" id="7Q2-kE-NJP"/>
                         <outlet property="resultKmYear" destination="7Kc-dq-9Xi" id="Kb8-Ae-Qrj"/>
-                        <outlet property="resultMarque" destination="kI9-2q-jiW" id="T3y-zs-tJ1"/>
+                        <outlet property="resultMarque" destination="kI9-2q-jiW" id="38R-hx-rRo"/>
                         <outlet property="resultModel" destination="bjj-Yh-IIN" id="ucj-1c-ON2"/>
                         <outlet property="resultProvince" destination="FoN-HY-B6T" id="K26-3s-7Ic"/>
                         <outlet property="resultYear" destination="xl4-iq-Ik3" id="FHb-mL-ru8"/>

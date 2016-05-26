@@ -15,7 +15,20 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 //	var activeTextfield:Int = 1;
 	let PVControl:PVController = PVController(containt: [:])
 	
+	let Api:ApiResult = ApiResult()
+
 	
+	var dictMarque:Dictionary<String, String> = [:]
+	
+	var dictModel:Dictionary<String, String> = [:]
+	
+	var dictYear:Dictionary<String, String> = [:]
+	
+	var dictPro:Dictionary<String, String> = [:]
+	
+	var marqueID:String = "";
+	var modelID:String = "";
+
 
 
 	
@@ -30,6 +43,10 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 		newUi.resultModel.delegate = self;
 		newUi.resultYear.delegate = self;
 		newUi.resultProvince.delegate = self;
+		
+		
+		dictMarque = Api.getMakers()
+		dictPro = Api.getProvinces()
 	}
 	
 	
@@ -57,41 +74,38 @@ class PVclassViewController: UIViewController, UITextFieldDelegate {
 	//va afficher le picker view
 	// retourn faux pour pas ouvrir le keyboard
 	
-	var x:String = "";
-	var y:String = "";
+	
 	
 	func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-	
-		let Api:ApiResult = ApiResult()
 		
 		
 		
 		switch textField.tag {
 			case 1:
-				PVControl.modifyContaint(textField, containt: Api.getMakers())
+				PVControl.modifyContaint(textField, containt: dictMarque)
 				newUi.resultYear.text = "Choisissez une année";
 				newUi.resultModel.text = "Choisissez un modèle";
 			break
 			case 2:
-				x = PVControl.getKeybyValue(newUi.resultMarque.text!)
-				PVControl.modifyContaint(textField, containt: Api.getModels(x))
+				marqueID = PVControl.getKeyByValue(newUi.resultMarque.text!)
+				dictModel = Api.getModels(marqueID)
+				PVControl.modifyContaint(textField, containt: dictModel)
 				newUi.resultYear.text = "Choisissez une année";
 				break
 			case 3:
-				print(x)
-				y = PVControl.getKeybyValue(newUi.resultModel.text!)
-				PVControl.modifyContaint(textField, containt: Api.getCars(x, modelid: y))
+				modelID = PVControl.getKeyByValue(newUi.resultModel.text!)
+				dictYear = Api.getCars(marqueID, modelid: modelID)
+				PVControl.modifyContaint(textField, containt: dictYear)
 				
 			break
 			case 4:
-				PVControl.modifyContaint(textField, containt: Api.getProvinces())
+				PVControl.modifyContaint(textField, containt: dictPro)
 			break
 			default:
 				PVControl.modifyContaint(textField, containt: [:])
 			break
 		}
-		
-		
+
 		newUi.dropdown.reloadAllComponents();
 
 		newUi.dropdown.hidden = false

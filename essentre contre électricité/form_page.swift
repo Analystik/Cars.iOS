@@ -18,8 +18,8 @@ class form_page: UIViewController  {
 	// tout des éléments du storyboard
 
 	@IBOutlet var dropdown: UIPickerView!
-	@IBOutlet var resultMarque: UITextField!
 	@IBOutlet var resultModel: UITextField!
+	@IBOutlet var resultMarque: UITextField!
 	@IBOutlet var resultYear: UITextField!
 	@IBOutlet var resultProvince: UITextField!
 	@IBOutlet var resultKmYear: UILabel!
@@ -37,7 +37,12 @@ class form_page: UIViewController  {
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		let currentValue = Int(sender.value);
 		resultKmYear.text = "\(currentValue)"+"km";
+		if resultMarque.text != "Choisissez une marque" && resultModel.text != "Choisissez un modèle" && resultYear.text != "Choisissez une année" && resultProvince.text != "Choisissez votre province"
+		{
 		button.hidden = false
+		}
+		
+		
 	}
 	
 
