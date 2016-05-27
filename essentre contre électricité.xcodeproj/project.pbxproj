@@ -33,7 +33,7 @@
 		50AF94DA1CEB720000C31489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AF94DC1CEB720000C31489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B42BD21CECAD2600D8C539 /* form_page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = form_page.swift; sourceTree = "<group>"; };
-		50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PVclassViewController.swift; path = ../PVclassViewController.swift; sourceTree = "<group>"; };
+		50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVclassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,7 @@
 		50AF94C41CEB720000C31489 = {
 			isa = PBXGroup;
 			children = (
+				50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */,
 				50AF94CF1CEB720000C31489 /* essentre contre électricité */,
 				50AF94CE1CEB720000C31489 /* Products */,
 			);
@@ -69,7 +70,6 @@
 				509CEE8B1CF74C57007E1250 /* carModel.swift */,
 				5062E4E41CF4E41500B60E98 /* PVController.swift */,
 				5062E4E21CF4DCA000B60E98 /* apiResult.swift */,
-				50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */,
 				503B124A1CECFEF600C1AFAD /* Main.storyboard */,
 				50AF94D01CEB720000C31489 /* AppDelegate.swift */,
 				50AF94D21CEB720000C31489 /* ViewController.swift */,

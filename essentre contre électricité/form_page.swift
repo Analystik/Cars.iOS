@@ -10,21 +10,21 @@ import UIKit
 
 class form_page: UIViewController  {
 	
-	var gestionUIclass: PVclassViewController!
+	
 	// gestion du data
-	var api: ApiResult!
-	var pvcontrol:mydropdownControl = mydropdownControl(containt:Array<AnyObject>())
-
+//	var api: ApiResult!
+	var pvcontrol:mydropdownControl = mydropdownControl(containt:Array<Make>())
 
 	
 	// tout des éléments du storyboard
 
 	@IBOutlet var btnMarque: UIButton!
 	@IBAction func btnMarqueClick(sender: UIButton) {
+		// data a mettre dans le pickerview
+		pvcontrol.modifyContaint(btnMarque, containt: pvcontrol.arrtMarque)
 		
-		pvcontrol.modifyContaint(btnMarque, containt: gestionUIclass.arrtMarque)
+//action du pickerview
 		pvcontrol.showPickerview(dropdown)
-		btnMarque.setTitle(pvcontrol.getTitle(), forState: UIControlState.Normal)
 		btnModele.setTitle("Choisir un modèle", forState: UIControlState.Normal)
 		btnYear.setTitle("Choisir une année", forState: UIControlState.Normal)
 
@@ -32,18 +32,30 @@ class form_page: UIViewController  {
 	}
 	
 	@IBOutlet var btnModele: UIButton!
-	
 	@IBAction func btnModeleClick(sender: UIButton) {
+	
+		pvcontrol.modifyContaintModel(btnModele, containt: pvcontrol.arrtModel)
+		pvcontrol.showPickerview(dropdown)
+		btnYear.setTitle("Choisir une année", forState: UIControlState.Normal)
+
+	
 	}
 	
 	
 	@IBOutlet var btnYear: UIButton!
 	@IBAction func btnYearClick(sender: UIButton) {
+		pvcontrol.modifyContaintCars(btnYear, containt: pvcontrol.arrtYear)
+		pvcontrol.showPickerview(dropdown)
+
 		
 	}
 	
 	@IBOutlet var btnProvince: UIButton!
 	@IBAction func btnProvinceClick(sender: UIButton!) {
+		
+		pvcontrol.modifyContaintProvince(btnProvince, containt: pvcontrol.arrtProvince)
+		pvcontrol.showPickerview(dropdown)
+
 		
 	}
 	
@@ -69,15 +81,13 @@ class form_page: UIViewController  {
 		resultKmYear.text = "\(currentValue)"+"km";
 		
 		
-	//	resultMarque.setTitle("Test", forState: UIControlState.Normal  )
 		
 		
 		
-		
-//		if btnMarque.curent != "Choisissez une marque" && btnModel.text != "Choisissez un modèle" && btnYear.text != "Choisissez une année" && btnProvince.text != "Choisissez votre province"
-//		{
-//		button.hidden = false
-//		}
+	if btnMarque.currentTitle != "Choisir une marque" && btnModele.currentTitle != "Choisir un modèle" && btnYear.currentTitle != "Choisir une année" && btnProvince.currentTitle != "Choisir"
+		{
+		button.hidden = false
+		}
 		
 		
 	}
@@ -86,8 +96,7 @@ class form_page: UIViewController  {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		gestionUIclass = PVclassViewController()
-		gestionUIclass.setui(self)
+		pvcontrol.setui(self)
 		
 		
 	

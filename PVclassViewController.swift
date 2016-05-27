@@ -8,36 +8,10 @@
 
 import UIKit
 
-class PVclassViewController: UIViewController, UITextFieldDelegate {
+class PVclassViewController: UIViewController {
 	
 
-	var arrtMarque:Array<Make> = []
-	var arrtModel:Array<Model> = []
-	var arrtYear:Array<Car> = []
-	var arrtProvince:Array<Province> = []
 	
-	var PVControl:mydropdownControl = mydropdownControl(containt:Array<AnyObject>())
-	let Api:ApiResult = ApiResult()
-	var newUi:form_page = form_page()
-
-	
-	func setui(ui: form_page){
-		
-		newUi=ui
-		
-		newUi.dropdown.delegate = PVControl;
-		newUi.dropdown.dataSource = PVControl
-		newUi.dropdown.hidden = true;
-		
-		arrtMarque = Api.getMakers()
-	//	arrtProvince = Api.getProvinces()
-	}
-
-
-	
-	var marqueID:String = "";
-	var modelID:String = "";
-
 
 
 	

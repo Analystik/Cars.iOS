@@ -15,11 +15,11 @@ class ApiResult {
 		let session = NSURLSession.sharedSession()
 		let semaphore = dispatch_semaphore_create(0)
 		var jsonArray = []
-	
+		
 		session.dataTaskWithURL(newurl, completionHandler: { (data, response, error) -> Void in
 			do{
 				if let webdata = NSString(data:data!, encoding: NSUTF8StringEncoding) {
-					jsonArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+					jsonArray = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [[String:AnyObject]]
 					
 					
 				}
@@ -30,16 +30,20 @@ class ApiResult {
 			}
 			
 			dispatch_semaphore_signal(semaphore)
-
+			
 		}).resume()
 		
-		 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+		dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
 		
 		return jsonArray
 	}
 	
-// to test
-
+	
+	
+	
+	
+	// to test
+	
 	
 	
 	func ApiPost(){
@@ -83,33 +87,52 @@ class ApiResult {
 	func getMakers() -> Array<Make> {
 		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes")
 		var result:Array<Make> = []
-		print(connection)
 		
 		for obj in connection {
-			let marque = Make(id: (obj.valueForKey("Id") as? Int)!, name: (obj.valueForKey("Name") as? String)!)
-			result.append(marque)
+			result.append(Make(json: obj))
+		}
+		
+		
+		return result
+	}
+	
+	
+	
+	
+	
+	
+	func getModels(makerid:Int)-> Array<Model> {
+		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes/" +  String(makerid) + "/models")
+		var result:Array<Model> = []
+
+		for obj in connection {
+			result.append(Model(json: obj))
 		}
 		
 		return result
 	}
 	
-
-	
-	
-	
-
-	/*func getModels(makerid:String)-> Dictionary<String, String> {
-		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes/" + makerid + "/models")
-		return connection
-	}
-	
-	func getCars(makerid:String, modelid:String)-> Dictionary<String, String> {
-		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes/" + makerid + "/models/" + modelid + "/Cars")
-		return connection
+	func getCars(makerid:Int, modelid:Int)-> Array<Car> {
+		let connection = ApiConnection("http://cars101.azurewebsites.net/api/makes/" + String(makerid) + "/models/" + String(modelid) + "/Cars")
+		var result:Array<Car> = []
+		
+		for obj in connection {
+			result.append(Car(json: obj))
+		}
+		
+		return result
 	}
 
-	func getProvinces()-> Dictionary<String,String> {
-		let connection = ApiConnection("http://cars101.azurewebsites.net/api/provinces")
-		return connection
-	}*/
+	func getProvinces()-> Array<Province> {
+	let connection = ApiConnection("http://cars101.azurewebsites.net/api/provinces")
+		var result:Array<Province> = []
+		
+		for obj in connection {
+			result.append(Province(json: obj))
+		}
+		
+		
+		return result
+	
+	}
 }

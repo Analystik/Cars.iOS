@@ -8,55 +8,133 @@
 
 import Foundation
 
-class Make{
-	var Id: Int;
-	var Name: String
-
-	init(id: Int, name:String){
-		self.Id = id;
-		self.Name = name
-	}
+protocol HasTitle{
+	func title() -> String
+	var Id: Int! {get}
 }
 
-class Model{
-	var Id: Int;
-	var Name: String
+
+class Make:HasTitle{
+	var Id: Int!
+	var Name: String!
+
+	init(){
+		self.Id = 0;
+		self.Name = ""
+	}
+	init(json:AnyObject){
+		if let id = json["Id"] as? Int{
+			self.Id = id
+		}
+		
+		if let name = json["Name"] as? String{
+			self.Name = name
+		}
+	}
+	
+	func title() -> String{
+		return self.Name
+	}
+	
+}
+
+class Model:HasTitle{
+	
+	var Id: Int!
+	var Name: String!
 	var make:Make
 
 	
-	init(id: Int, name:String, make:Make){
-		self.Id = id;
-		self.Name = name
-		self.make = make
+	init(){
+		self.Id = 0;
+		self.Name = ""
+		self.make = Make()
+
 	}
+	init(json:AnyObject){
+		if let id = json["Id"] as? Int{
+			self.Id = id
+		}
+		
+		if let name = json["Name"] as? String{
+			self.Name = name
+		}
+		
+		self.make = Make()
+
+	}
+	
+	func title() -> String{
+		return self.Name
+	}
+
 }
 
-class Car{
-	var Id: Int;
+class Car:HasTitle{
+	var Id: Int!
 	var model:Model
-	var Year4Digits:Int
-	var Consumption:Double
-	var Price:Int
+	var Year4Digits: Int!
+	var Consumption: Double!
+	var Price: Int!
 	
-	init(id: Int, model:Model, year4digits:Int, consumption:Double, price:Int){
-		self.Id = id;
-		self.model = model
-		self.Year4Digits = year4digits
-		self.Consumption = consumption
-		self.Price = price
+	init(){
+		self.Id = 0;
+		self.model = Model()
+		self.Year4Digits = 0
+		self.Consumption = 0.00
+		self.Price = 0
 	}
+	init(json:AnyObject){
+		if let id = json["Id"] as? Int{
+			self.Id = id
+		}
+		
+		if let name = json["Year4Digits"] as? Int{
+			self.Year4Digits = name
+		}
+		
+		if let consumption = json["Consumption"] as? Double{
+			self.Consumption = consumption
+		}
+		
+		if let price = json["Price"] as? Int{
+			self.Price = price }
+		
+		self.model = Model()
+		
+	}
+	
+	func title() -> String{
+		return String(self.Year4Digits)
+	}
+
 }
 
-class Province{
-	var Id: Int;
-	var Name: String
+class Province:HasTitle{
+	var Id: Int!
+	var Name: String!
 	
-	init(id: Int, name:String){
-		self.Id = id;
-		self.Name = name
+	
+	init(){
+		self.Id = 0;
+		self.Name = ""
 	}
-}
+	init(json:AnyObject){
+		if let id = json["Id"] as? Int{
+			self.Id = id
+		}
+		
+		if let name = json["Name"] as? String{
+			self.Name = name
+		}
+	}
+	
+	func title() -> String{
+		return self.Name
+	}
 
+}
+/*
 class Profil{
 	var CarId: Int;
 	var KMPerYear: Int
@@ -67,4 +145,4 @@ class Profil{
 		self.KMPerYear = kmperyear;
 		self.ProvinceId = provinceid
 	}
-}
+}*/

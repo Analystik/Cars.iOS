@@ -8,7 +8,7 @@
 
 import UIKit
 
-class result: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class result: UIViewController {
 
 	//data
 	
@@ -18,12 +18,15 @@ class result: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	
 	//tout des éléments du storyboard
-	@IBOutlet var esence100: UILabel!
-	@IBOutlet var essencetotal: UILabel!
-	@IBOutlet var elec100: UILabel!
-	@IBOutlet var electotal: UILabel!
-	@IBOutlet var tableView: UITableView!
 	
+	@IBOutlet var depessence: UILabel!
+	@IBOutlet var depenceelec: UILabel!
+	@IBOutlet var achatelec: UILabel!
+	@IBOutlet var remplassepile: UILabel!
+	@IBOutlet var essence100: UILabel!
+	@IBOutlet var elec100: UILabel!
+	@IBOutlet var esstotal: UILabel!
+	@IBOutlet var electotal: UILabel!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +45,4 @@ class result: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
 
-	
-	//tableview method
-	//creer la cellule et le texte
-	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-		cell.textLabel?.text = resultArray[indexPath.row]
-		return cell
-	}
-	
-	
-	// creer le nombre de ranger
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return resultArray.count;
-	}
 }
