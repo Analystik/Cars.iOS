@@ -10,11 +10,12 @@ import UIKit
 
 class result: UIViewController {
 
+	let Api:ApiResult = ApiResult()
+	
+	
 	//data
 	
-	let resultArray:Array = ["Vous dépenserez XXX$ sur l'essence", "Vous dépenserez XXX$ sur l'électricité", "Vous allez dépenser xxx$ de plus pour acheter une voiture électrique(incluant la subvention).","Le coût de remplacement des piles est de: xxx$"]
-	
-	
+
 	
 	
 	//tout des éléments du storyboard
@@ -31,10 +32,17 @@ class result: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-		//connection a database
-		// chnager le layout
 		
-		// entrer les variable
+		let x =  Api.calculate(Profil(carid: 2,kmperyear: 150000,provinceid: 1))
+		
+		depessence.text = "Vous dépenserez \(x.TotalGaz8years)$ sur l'essence"
+		depenceelec.text = "Vous dépenserez \(x.TotalElec8years)$ sur l'électricité"
+		achatelec.text = "Vous allez dépenser \(x.delta)$ de plus pour acheter une voiture électrique(incluant la subvention)."
+		remplassepile.text = "Le coût de remplacement des piles est de: \(x.batterie)$"
+		essence100.text =  "\(x.TotalGaz100)$ sur 100km"
+		elec100.text = "\(x.TotalElec100)$ sur 100km"
+		esstotal.text = "\(x.TotalGaz8years)$ sur 8ans"
+		electotal.text = "\(x.TotalElec8years)$ sur 8ans"
 		
 
     }

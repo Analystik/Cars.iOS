@@ -10,6 +10,8 @@ import UIKit
 
 class form_page: UIViewController  {
 	
+	var currentKM = 10000
+	
 	
 	// gestion du data
 //	var api: ApiResult!
@@ -77,8 +79,8 @@ class form_page: UIViewController  {
 		// fin de la frame
 	
 	@IBAction func sliderValuechanged(sender: UISlider) {
-		let currentValue = Int(sender.value);
-		resultKmYear.text = "\(currentValue)"+"km";
+		currentKM  = Int(sender.value);
+		resultKmYear.text = "\(currentKM)"+"km";
 		
 		
 		

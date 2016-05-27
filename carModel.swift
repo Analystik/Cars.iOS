@@ -134,15 +134,33 @@ class Province:HasTitle{
 	}
 
 }
-/*
+
 class Profil{
-	var CarId: Int;
-	var KMPerYear: Int
-	var ProvinceId:Int
+	var CarId: Int!
+	var KMPerYear: Int!
+	var ProvinceId:Int!
 	
 	init(carid: Int, kmperyear:Int, provinceid:Int){
 		self.CarId = carid;
 		self.KMPerYear = kmperyear;
 		self.ProvinceId = provinceid
 	}
-}*/
+}
+
+class eval{
+	var batterie = 9.99
+	var delta = 9.99
+	var Elec8years = 9.99
+	var TotalElec8years:Double = 9.99
+	var TotalElec100 = 9.99
+	var Gaz8years = 9.99
+	var TotalGaz8years:Double = 9.99
+	var TotalGaz100 = 9.99
+	var millage8y = 9.99
+
+
+	init()
+	{}
+
+}
+

@@ -46,11 +46,11 @@ class ApiResult {
 	
 	
 	
-	func ApiPost(){
+	func ApiPost(profil:Profil){
 		let postEndPoint:String = "http://cars101.azurewebsites.net/api/calculate"
 		let url = NSURL(string: postEndPoint)!
 		let session = NSURLSession.sharedSession()
-		let postParams : [String: AnyObject] = ["hello": "hello post world"]
+		let postParams : [Int] = [2,15000,1]
 		
 		let request = NSMutableURLRequest(URL: url)
 		request.HTTPMethod = "POST"
@@ -95,9 +95,7 @@ class ApiResult {
 		
 		return result
 	}
-	
-	
-	
+
 	
 	
 	
@@ -135,4 +133,13 @@ class ApiResult {
 		return result
 	
 	}
-}
+	
+	func calculate(profil:Profil) -> eval{
+		let result = eval()
+		
+		return result
+			
+		
+		}
+		
+	}

@@ -18,7 +18,9 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 	
 	var currentMarque = 0
 	var currentModel = 0
-	
+	var currentProvince = 0
+	var currentkm = 0
+
 	let Api:ApiResult = ApiResult()
 	
 	
@@ -29,6 +31,7 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 		newUi.dropdown.delegate = self;
 		newUi.dropdown.dataSource = self;
 		newUi.dropdown.hidden = true;
+		currentkm = newUi.currentKM
 		
 		arrtMarque = Api.getMakers()
 		arrtProvince = Api.getProvinces()
@@ -102,6 +105,9 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 		}else if button.currentTitle == "Choisir un modèle"{
 		currentModel = x.Id
 		arrtYear = Api.getCars(currentMarque, modelid: currentModel)
+		}
+		else if button.currentTitle == "Choisir une province"{
+		currentProvince = x.Id
 		}
 		button.setTitle(x.title(), forState: UIControlState.Normal)
 		pickerView.hidden = true
