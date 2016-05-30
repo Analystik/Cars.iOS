@@ -147,7 +147,7 @@ class Profil{
 	}
 }
 
-class eval{
+class FinancialEvaluation{
 	var batterie = 9.99
 	var delta = 9.99
 	var Elec8years = 9.99
@@ -158,9 +158,41 @@ class eval{
 	var TotalGaz100 = 9.99
 	var millage8y = 9.99
 
+	init(){
+	}
+	
 
-	init()
-	{}
+	init(json:AnyObject){
+		if let bat = json["BatteryExpenses"] as? Double{
+			self.batterie = bat
+		}
+		
+		if let bat = json["DeltaPrice"] as? Double{
+			self.delta = bat
+		}
+		if let bat = json["ElectricityConsumptionIn8Years"] as? Double{
+			self.Elec8years = bat
+		}
+		if let bat = json["ElectricityTotalExpensesIn8Years"] as? Double{
+			self.TotalElec8years = bat
+		}
+		if let bat = json["ElectricityTotalExpensesPer100km"] as? Double{
+			self.TotalElec100 = bat
+		}
+		if let bat = json["GasConsumptionIn8Years"] as? Double{
+			self.Gaz8years = bat
+		}
+		if let bat = json["GasTotalExpensesIn8Years"] as? Double{
+			self.TotalGaz8years = bat
+		}
+		if let bat = json["GasTotalExpensesPer100km"] as? Double{
+			self.TotalGaz100 = bat
+		}
+		if let bat = json["MileageIn8Years"] as? Double{
+			self.millage8y = bat
+		}
+	
+	}
+
 
 }
-

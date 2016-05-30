@@ -41,46 +41,60 @@ class ApiResult {
 	
 	
 	
-	
+
 	// to test
 	
 	
 	
-	func ApiPost(profil:Profil){
-		let postEndPoint:String = "http://cars101.azurewebsites.net/api/calculate"
-		let url = NSURL(string: postEndPoint)!
+	func ApiPost() -> AnyObject{
+		
+		let request = NSMutableURLRequest(URL: NSURL(string: "http://cars101.azurewebsites.net/api/calculate")!)
+		let semaphore = dispatch_semaphore_create(0)
 		let session = NSURLSession.sharedSession()
-		let postParams : [Int] = [2,15000,1]
-		
-		let request = NSMutableURLRequest(URL: url)
-		request.HTTPMethod = "POST"
-		request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type" )
-		
-		do{
-			request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(
-				postParams, options: NSJSONWritingOptions())
+		var jsonresponse:AnyObject = ""
+		request.HTTPMethod = "PUT"
+		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+		request.addValue("application/json", forHTTPHeaderField: "Accept")
+		let params = [
+			"CarId" : "1",
+			"KMPerYear" : "15000",
+			"ProvinceId" : "1"] as Dictionary<String, String>
+		do {
+			request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])
 		} catch {
-			"DIDN'T work"
+			print(error)
 		}
 		
-		session.dataTaskWithRequest(request, completionHandler:
-			{(data : NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-				guard let realResponse = response as? NSHTTPURLResponse where
-					realResponse.statusCode == 200 else {
-						print("NOT 200 response")
-						return
+		let task = session.dataTaskWithRequest(request) { data, response, error in
+			guard data != nil else {
+				print("no data found: \(error)")
+				return
+			}
+			do {
+				if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+					let success = json["success"] as? Int
+					print("Success: \(success)")
+					print(response)
+					print(json)
+					jsonresponse = json
+					} else {
+					let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+					print("Error could not parse JSON: \(jsonStr)")
 				}
-				if let postString = NSString(data:data!, encoding: NSUTF8StringEncoding) as? String {
-					print("POST: " + postString)
-				}
-		}).resume()
+			} catch let parseError {
+				print(parseError)
+				let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+				print("Error could not parse JSON: '\(jsonStr)'")
+			}
 		
-		
+			dispatch_semaphore_signal(semaphore)
+
+		}
+		task.resume()
+			dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+
+		return jsonresponse
 	}
-	
-	
-	
-	
 	
 	
 	
@@ -134,11 +148,11 @@ class ApiResult {
 	
 	}
 	
-	func calculate(profil:Profil) -> eval{
-		let result = eval()
+	func calculate() -> FinancialEvaluation{
 		
+		let connection = ApiPost()
+		let result = FinancialEvaluation(json: connection)
 		return result
-			
 		
 		}
 		

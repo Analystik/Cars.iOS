@@ -34,6 +34,7 @@
 		50AF94DC1CEB720000C31489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B42BD21CECAD2600D8C539 /* form_page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = form_page.swift; sourceTree = "<group>"; };
 		50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVclassViewController.swift; sourceTree = "<group>"; };
+		50D8297E1CFC9015004ABEFF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../../../../Desktop/app/MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 		50AF94C41CEB720000C31489 = {
 			isa = PBXGroup;
 			children = (
+				50D8297E1CFC9015004ABEFF /* MyPlayground.playground */,
 				50CD2C821CEF85EC00CAEC35 /* PVclassViewController.swift */,
 				50AF94CF1CEB720000C31489 /* essentre contre électricité */,
 				50AF94CE1CEB720000C31489 /* Products */,

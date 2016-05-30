@@ -14,7 +14,7 @@ class form_page: UIViewController  {
 	
 	
 	// gestion du data
-//	var api: ApiResult!
+	var api: ApiResult!
 	var pvcontrol:mydropdownControl = mydropdownControl(containt:Array<Make>())
 
 	
@@ -99,6 +99,7 @@ class form_page: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
 		pvcontrol.setui(self)
+		
 		
 		
 	

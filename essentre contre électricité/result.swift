@@ -33,7 +33,7 @@ class result: UIViewController {
         super.viewDidLoad()
 
 		
-		let x =  Api.calculate(Profil(carid: 2,kmperyear: 150000,provinceid: 1))
+		let x = Api.calculate()
 		
 		depessence.text = "Vous dépenserez \(x.TotalGaz8years)$ sur l'essence"
 		depenceelec.text = "Vous dépenserez \(x.TotalElec8years)$ sur l'électricité"
@@ -44,8 +44,7 @@ class result: UIViewController {
 		esstotal.text = "\(x.TotalGaz8years)$ sur 8ans"
 		electotal.text = "\(x.TotalElec8years)$ sur 8ans"
 		
-
-    }
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,3 +53,8 @@ class result: UIViewController {
     
 
 }
+
+
+
+
+
