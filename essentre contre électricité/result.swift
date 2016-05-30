@@ -12,7 +12,6 @@ class result: UIViewController {
 
 	let Api:ApiResult = ApiResult()
 	
-	
 	//data
 	
 
@@ -32,8 +31,10 @@ class result: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
+		let pvcontrol:mydropdownControl = mydropdownControl()
+
 		
-		let x = Api.calculate()
+		let x = Api.calculate(Profil(carid: pvcontrol.currentCar,kmperyear: pvcontrol.currentkm,provinceid: pvcontrol.currentkm))
 		
 		depessence.text = "Vous dépenserez \(x.TotalGaz8years)$ sur l'essence"
 		depenceelec.text = "Vous dépenserez \(x.TotalElec8years)$ sur l'électricité"

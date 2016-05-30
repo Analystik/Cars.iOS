@@ -20,9 +20,12 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 	var currentModel = 0
 	var currentProvince = 0
 	var currentkm = 0
+	var currentCar = 0
+	
 
 	let Api:ApiResult = ApiResult()
 	
+
 	
 	func setui(ui: form_page){
 		
@@ -109,6 +112,10 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
 		else if button.currentTitle == "Choisir une province"{
 		currentProvince = x.Id
 		}
+		else if button.currentTitle == "Choisir une année"{
+			currentCar = x.Id
+		}
+		
 		button.setTitle(x.title(), forState: UIControlState.Normal)
 		pickerView.hidden = true
 	}

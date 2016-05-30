@@ -10,6 +10,9 @@ import Foundation
 
 class ApiResult {
 	
+	let profil:Profil! = nil
+	
+	
 	func ApiConnection(url:String) -> NSArray{
 		let newurl = NSURL(string: url)!
 		let session = NSURLSession.sharedSession()
@@ -46,7 +49,7 @@ class ApiResult {
 	
 	
 	
-	func ApiPost() -> AnyObject{
+	func ApiPost(profil:Profil) -> AnyObject{
 		
 		let request = NSMutableURLRequest(URL: NSURL(string: "http://cars101.azurewebsites.net/api/calculate")!)
 		let semaphore = dispatch_semaphore_create(0)
@@ -56,9 +59,9 @@ class ApiResult {
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
 		let params = [
-			"CarId" : "1",
-			"KMPerYear" : "15000",
-			"ProvinceId" : "1"] as Dictionary<String, String>
+			"CarId" : profil.CarId,
+			"KMPerYear" : profil.KMPerYear,
+			"ProvinceId" : profil.ProvinceId] as Dictionary<String, AnyObject>
 		do {
 			request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])
 		} catch {
@@ -148,9 +151,9 @@ class ApiResult {
 	
 	}
 	
-	func calculate() -> FinancialEvaluation{
+	func calculate(profil:Profil) -> FinancialEvaluation{
 		
-		let connection = ApiPost()
+		let connection = ApiPost(profil)
 		let result = FinancialEvaluation(json: connection)
 		return result
 		

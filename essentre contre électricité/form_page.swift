@@ -81,6 +81,7 @@ class form_page: UIViewController  {
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		currentKM  = Int(sender.value);
 		resultKmYear.text = "\(currentKM)"+"km";
+		pvcontrol.currentkm = currentKM
 		
 		
 		
