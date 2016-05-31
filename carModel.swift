@@ -1,198 +1,189 @@
-//
 //  carModel.swift
-//  essentre contre électricité
-//
-//  Created by Maxime Trudel on 16-05-26.
 //  Copyright © 2016 Analystik. All rights reserved.
-//
 
 import Foundation
 
 protocol HasTitle{
+	var id: Int! {get}
 	func title() -> String
-	var Id: Int! {get}
 }
 
-
-class Make:HasTitle{
-	var Id: Int!
-	var Name: String!
+class  Make: HasTitle{
+	var id: Int!
+	var name: String!
 
 	init(){
-		self.Id = 0;
-		self.Name = ""
+		self.id = 0;
+		self.name = ""
 	}
-	init(json:AnyObject){
+	
+	init(json: AnyObject){
 		if let id = json["Id"] as? Int{
-			self.Id = id
+			self.id = id
 		}
 		
 		if let name = json["Name"] as? String{
-			self.Name = name
+			self.name = name
 		}
 	}
 	
 	func title() -> String{
-		return self.Name
+		return self.name
 	}
-	
 }
 
-class Model:HasTitle{
-	
-	var Id: Int!
-	var Name: String!
-	var make:Make
-
+class Model: HasTitle{
+	var id: Int!
+	var name: String!
+	var make: Make
 	
 	init(){
-		self.Id = 0;
-		self.Name = ""
-		self.make = Make()
-
+		self.id = 0;
+		self.name = ""
+		self.make =  Make()
 	}
-	init(json:AnyObject){
+	
+	init(json: AnyObject){
 		if let id = json["Id"] as? Int{
-			self.Id = id
+			self.id = id
 		}
 		
 		if let name = json["Name"] as? String{
-			self.Name = name
+			self.name = name
 		}
 		
 		self.make = Make()
-
 	}
 	
 	func title() -> String{
-		return self.Name
+		return self.name
 	}
-
 }
 
-class Car:HasTitle{
-	var Id: Int!
+class Car: HasTitle{
+	var id: Int!
 	var model:Model
-	var Year4Digits: Int!
-	var Consumption: Double!
-	var Price: Int!
+	var year4Digits: Int!
+	var consumption: Double!
+	var price: Int!
 	
 	init(){
-		self.Id = 0;
+		self.id = 0;
 		self.model = Model()
-		self.Year4Digits = 0
-		self.Consumption = 0.00
-		self.Price = 0
+		self.year4Digits = 0
+		self.consumption = 0.00
+		self.price = 0
 	}
-	init(json:AnyObject){
+	
+	init(json: AnyObject){
 		if let id = json["Id"] as? Int{
-			self.Id = id
+			self.id = id
 		}
 		
 		if let name = json["Year4Digits"] as? Int{
-			self.Year4Digits = name
+			self.year4Digits = name
 		}
 		
 		if let consumption = json["Consumption"] as? Double{
-			self.Consumption = consumption
+			self.consumption = consumption
 		}
 		
 		if let price = json["Price"] as? Int{
-			self.Price = price }
+			self.price = price }
 		
 		self.model = Model()
-		
 	}
 	
 	func title() -> String{
-		return String(self.Year4Digits)
+		return String(self.year4Digits)
 	}
-
 }
 
-class Province:HasTitle{
-	var Id: Int!
-	var Name: String!
-	
+class Province: HasTitle{
+	var id: Int!
+	var name: String!
 	
 	init(){
-		self.Id = 0;
-		self.Name = ""
+		self.id = 0;
+		self.name = ""
 	}
-	init(json:AnyObject){
+	
+	init(json: AnyObject){
 		if let id = json["Id"] as? Int{
-			self.Id = id
+			self.id = id
 		}
 		
 		if let name = json["Name"] as? String{
-			self.Name = name
+			self.name = name
 		}
 	}
 	
 	func title() -> String{
-		return self.Name
+		return self.name
 	}
-
 }
 
 class Profil{
-	var CarId: Int!
-	var KMPerYear: Int!
-	var ProvinceId:Int!
+	var carId: Int!
+	var kmPerYear: Int!
+	var provinceId: Int!
 	
-	init(carid: Int, kmperyear:Int, provinceid:Int){
-		self.CarId = carid;
-		self.KMPerYear = kmperyear;
-		self.ProvinceId = provinceid
+	init(carId: Int, kmPerYear: Int, provinceId: Int){
+		self.carId = carId;
+		self.kmPerYear = kmPerYear;
+		self.provinceId = provinceId
 	}
 }
 
 class FinancialEvaluation{
-	var batterie = 9.99
-	var delta = 9.99
-	var Elec8years = 9.99
-	var TotalElec8years:Double = 9.99
-	var TotalElec100 = 9.99
-	var Gaz8years = 9.99
-	var TotalGaz8years:Double = 9.99
-	var TotalGaz100 = 9.99
-	var millage8y = 9.99
+	var batteryExpenses = 9.99
+	var deltaPrice = 9.99
+	var electricityConsomptionIn8Years = 9.99
+	var electricityTotalExpensesIn8Years:Double = 9.99
+	var electricityTotalExpensesPer100km = 9.99
+	var gasConsomptionIn8Years = 9.99
+	var gasTotalExpensesIn8Years:Double = 9.99
+	var gasTotalExpensesPer100km = 9.99
+	var millageIn8Years = 9.99
 
 	init(){
 	}
-	
 
 	init(json:AnyObject){
 		if let bat = json["BatteryExpenses"] as? Double{
-			self.batterie = bat
+			self.batteryExpenses = bat
 		}
 		
 		if let bat = json["DeltaPrice"] as? Double{
-			self.delta = bat
+			self.deltaPrice = bat
 		}
+		
 		if let bat = json["ElectricityConsumptionIn8Years"] as? Double{
-			self.Elec8years = bat
+			self.electricityConsomptionIn8Years = bat
 		}
+		
 		if let bat = json["ElectricityTotalExpensesIn8Years"] as? Double{
-			self.TotalElec8years = bat
+			self.electricityTotalExpensesIn8Years = bat
 		}
+		
 		if let bat = json["ElectricityTotalExpensesPer100km"] as? Double{
-			self.TotalElec100 = bat
+			self.electricityTotalExpensesPer100km = bat
 		}
+		
 		if let bat = json["GasConsumptionIn8Years"] as? Double{
-			self.Gaz8years = bat
+			self.gasConsomptionIn8Years = bat
 		}
+		
 		if let bat = json["GasTotalExpensesIn8Years"] as? Double{
-			self.TotalGaz8years = bat
+			self.gasTotalExpensesIn8Years = bat
 		}
+		
 		if let bat = json["GasTotalExpensesPer100km"] as? Double{
-			self.TotalGaz100 = bat
+			self.gasTotalExpensesPer100km = bat
 		}
+		
 		if let bat = json["MileageIn8Years"] as? Double{
-			self.millage8y = bat
+			self.millageIn8Years = bat
 		}
-	
 	}
-
-
 }

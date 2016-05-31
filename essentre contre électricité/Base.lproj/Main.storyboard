@@ -237,7 +237,7 @@
         <!--Essence contre électricité-->
         <scene sceneID="UCU-0K-f5r">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y6Q-rM-a4w" customClass="result" customModule="essentre_contre_e_lectricite_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y6Q-rM-a4w" customClass="Result" customModule="essentre_contre_e_lectricite_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hkm-iY-Dbh"/>
                         <viewControllerLayoutGuide type="bottom" id="mQ2-4x-2cJ"/>

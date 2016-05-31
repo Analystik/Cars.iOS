@@ -1,24 +1,10 @@
-//
 //  result.swift
-//  essentre contre électricité
-//
-//  Created by Maxime Trudel on 16-05-19.
 //  Copyright © 2016 Analystik. All rights reserved.
-//
 
 import UIKit
 
-class result: UIViewController {
-
-	let Api:ApiResult = ApiResult()
-	
-	//data
-	
-	
-
-	
-	
-	//tout des éléments du storyboard
+class Result: UIViewController {
+	let Api: ApiResult = ApiResult()
 	
 	@IBOutlet var depessence: UILabel!
 	@IBOutlet var depenceelec: UILabel!
@@ -32,30 +18,19 @@ class result: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-
+		let finEvaluation = Api.calculate(Profil(carId: CurrentValue.car, kmPerYear: KmCurrent.km, provinceId: CurrentValue.province))
 		
-		let x = Api.calculate(Profil(carid: Constants.currentCar,kmperyear: kmconstant.currentkm,provinceid: Constants.currentProvince))
-		
-		depessence.text = "Vous dépenserez \(String(format:"%.2f", x.TotalGaz8years))$ sur l'essence"
-		depenceelec.text = "Vous dépenserez \(String(format: "%.2f", x.TotalElec8years))$ sur l'électricité"
-		achatelec.text = "Vous allez dépenser \(String(format: "%.2f", x.delta))$ de plus pour acheter une voiture électrique(incluant la subvention)."
-		remplassepile.text = "Le coût de remplacement des piles est de: \(String(format: "%.2f", x.batterie))$"
-		essence100.text =  "\(String(format: "%.2f", x.TotalGaz100))$ sur 100km"
-		elec100.text = "\(String(format: "%.2f", x.TotalElec100))$ sur 100km"
-		esstotal.text = "\(String(format: "%.2f", x.TotalGaz8years))$ sur 8ans"
-		electotal.text = "\(String(format: "%.2f", x.TotalElec8years))$ sur 8ans"
-		
+		depessence.text = "Vous dépenserez \(String(format:"%.2f", finEvaluation.gasTotalExpensesIn8Years))$ sur l'essence"
+		depenceelec.text = "Vous dépenserez \(String(format: "%.2f", finEvaluation.electricityTotalExpensesIn8Years))$ sur l'électricité"
+		achatelec.text = "Vous allez dépenser \(String(format: "%.2f", finEvaluation.deltaPrice))$ de plus pour acheter une voiture électrique(incluant la subvention)."
+		remplassepile.text = "Le coût de remplacement des piles est de: \(String(format: "%.2f", finEvaluation.batteryExpenses))$"
+		essence100.text =  "\(String(format: "%.2f", finEvaluation.gasTotalExpensesPer100km))$ sur 100km"
+		elec100.text = "\(String(format: "%.2f", finEvaluation.electricityTotalExpensesPer100km))$ sur 100km"
+		esstotal.text = "\(String(format: "%.2f", finEvaluation.gasTotalExpensesIn8Years))$ sur 8ans"
+		electotal.text = "\(String(format: "%.2f", finEvaluation.electricityTotalExpensesIn8Years))$ sur 8ans"
 	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
 }
-
-
-
-
-

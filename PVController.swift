@@ -1,136 +1,100 @@
-//
-//  PVController.swift 
-//  essentre contre électricité
-//
-//  Created by Maxime Trudel on 16-05-24.
+//  PVController.swift
 //  Copyright © 2016 Analystik. All rights reserved.
-//
 
 import Foundation
 import UIKit
 
-struct Constants {
-	
-	static	var currentMarque = 0
-	static	var currentModel = 0
-	static	var currentProvince = 0
-	static	var currentCar = 0
+struct CurrentValue {
+	static var marque = 0
+	static var model = 0
+	static var province = 0
+	static var car = 0
 }
 
+class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+	let api: ApiResult = ApiResult()
+	
+	var makes: Array<Make> = []
+	var models: Array<Model> = []
+	var cars: Array<Car> = []
+	var provinces: Array<Province> = []
+	
+	var containt: Array<AnyObject> = []
+	var selectedbutton: UIButton = UIButton()
 
-class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource{
-	
-	var arrtMarque:Array<Make> = []
-	var arrtModel:Array<Model> = []
-	var arrtYear:Array<Car> = []
-	var arrtProvince:Array<Province> = []
-	
-	
-
-	let Api:ApiResult = ApiResult()
-	
-
-	
 	func setui(ui: form_page){
+		ui.dropdown.delegate = self;
+		ui.dropdown.dataSource = self;
+		ui.dropdown.hidden = true;
 		
-		let newUi = ui
-		
-		newUi.dropdown.delegate = self;
-		newUi.dropdown.dataSource = self;
-		newUi.dropdown.hidden = true;
-		
-		arrtMarque = Api.getMakers()
-		arrtProvince = Api.getProvinces()
+		makes = api.getMakes()
+		provinces = api.getProvinces()
+	}
+	
+	func modifyContaint(button: UIButton, containt: Array<Make>) {
+		self.containt = containt
+		self.selectedbutton = button
+	}
+	
+	func modifyContaintModel(button: UIButton,containt: Array<Model>) {
+		self.containt = containt
+		self.selectedbutton = button
+	}
+	
+	func modifyContaintCars(button: UIButton,containt: Array<Car>) {
+		self.containt = containt
+		self.selectedbutton = button
+	}
+	
+	func modifyContaintProvince(button: UIButton,containt: Array<Province>) {
+		self.containt = containt
+		self.selectedbutton = button
+	}
+	
+	// Reload les valeurs et affiche le pickerview
+	func showPickerview(pickerView:UIPickerView) {
+		pickerView.reloadAllComponents();
+		pickerView.hidden = false;
 	}
 
+	//*** Tout ce qui suit est demandé par les interfaces UIPickerViewDelegate, UIPickerViewDataSource ***//
 	
-	var containt:Array<AnyObject>
-	var button:UIButton
-	var titleBtn:String = ""
-	
-	init(containt: Array<Make>){
-		self.containt = containt
-		self.button = UIButton()
-	}
-
-	init(containt: Array<Model>){
-		self.containt = containt
-		self.button = UIButton()
-	}
-
-	
-	func modifyContaint(button: UIButton, containt: Array<Make>){
-		self.containt = containt
-		self.button = button
-	}
-	
-	func modifyContaintModel(button: UIButton,containt: Array<Model>){
-		self.containt = containt
-		self.button = button
-
-	}
-	
-	func modifyContaintCars(button: UIButton,containt: Array<Car>){
-		self.containt = containt
-		self.button = button
-
-	}
-	
-	func modifyContaintProvince(button: UIButton,containt: Array<Province>){
-		self.containt = containt
-		self.button = button
-		
-
-	}
-	
-	
-	
-	// donne le nombre de colonne du pickerview
+	// Donne le nombre de colonne du pickerview
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
 		return 1
 	}
 	
-	// donne le nombre de ranger du pickerview
+	// Donne le nombre de rows du pickerview
 	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return containt.count
 	}
 	
-	//associe les titre au pickerview
-	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-		let x = containt[row] as! HasTitle
-		return x.title()
+	// Associe les titres au pickerview
+	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		let value = containt[row] as! HasTitle
+		return value.title()
 	}
 	
-	// associe le choix du pickerview au textfield
-	// cache le pickerview
-	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-		let x = containt[row] as! HasTitle
-		if button.tag == 1{
-		Constants.currentMarque = x.Id
-		arrtModel = Api.getModels(Constants.currentMarque)
+	// Associe le choix du pickerview au boutton
+	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		let value = containt[row] as! HasTitle
 		
-		}else if button.tag == 2{
-		Constants.currentModel = x.Id
-		arrtYear = Api.getCars(Constants.currentMarque, modelid: Constants.currentModel)
-		}
-		else if button.tag == 3 {
-			Constants.currentCar = x.Id
-		}
-		else if button.tag ==  4{
-		Constants.currentProvince = x.Id
+		if selectedbutton.tag == 1 {
+			CurrentValue.marque = value.id
+			models = api.getModels(CurrentValue.marque)
+		
+		} else if selectedbutton.tag == 2 {
+			CurrentValue.model = value.id
+			cars = api.getCars(CurrentValue.marque, modelId: CurrentValue.model)
+		
+		} else if selectedbutton.tag == 3 {
+			CurrentValue.car = value.id
+		
+		} else if selectedbutton.tag ==  4 {
+			CurrentValue.province = value.id
 		}
 		
-		
-		button.setTitle(x.title(), forState: UIControlState.Normal)
+		selectedbutton.setTitle(value.title(), forState: UIControlState.Normal)
 		pickerView.hidden = true
 	}
-	
-	func showPickerview(pickerView:UIPickerView){
-		pickerView.reloadAllComponents();
-		pickerView.hidden = false;
-	}
-	
-	
-	
-	
 }
