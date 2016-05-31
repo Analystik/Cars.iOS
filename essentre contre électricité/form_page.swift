@@ -8,9 +8,18 @@
 
 import UIKit
 
+
+struct kmconstant {
+	
+		static	var currentkm = 0
+	
+}
+
+
 class form_page: UIViewController  {
 	
 	var currentKM = 10000
+	
 	
 	
 	// gestion du data
@@ -81,7 +90,7 @@ class form_page: UIViewController  {
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		currentKM  = Int(sender.value);
 		resultKmYear.text = "\(currentKM)"+"km";
-		pvcontrol.currentkm = currentKM
+		kmconstant.currentkm = currentKM
 		
 		
 		

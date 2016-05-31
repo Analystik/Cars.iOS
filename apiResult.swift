@@ -21,7 +21,7 @@ class ApiResult {
 		
 		session.dataTaskWithURL(newurl, completionHandler: { (data, response, error) -> Void in
 			do{
-				if let webdata = NSString(data:data!, encoding: NSUTF8StringEncoding) {
+				if NSString(data:data!, encoding: NSUTF8StringEncoding) != nil {
 					jsonArray = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [[String:AnyObject]]
 					
 					

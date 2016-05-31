@@ -14,6 +14,7 @@ class result: UIViewController {
 	
 	//data
 	
+	
 
 	
 	
@@ -31,19 +32,18 @@ class result: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-		let pvcontrol:mydropdownControl = mydropdownControl()
 
 		
-		let x = Api.calculate(Profil(carid: pvcontrol.currentCar,kmperyear: pvcontrol.currentkm,provinceid: pvcontrol.currentkm))
+		let x = Api.calculate(Profil(carid: Constants.currentCar,kmperyear: kmconstant.currentkm,provinceid: Constants.currentProvince))
 		
-		depessence.text = "Vous dépenserez \(x.TotalGaz8years)$ sur l'essence"
-		depenceelec.text = "Vous dépenserez \(x.TotalElec8years)$ sur l'électricité"
-		achatelec.text = "Vous allez dépenser \(x.delta)$ de plus pour acheter une voiture électrique(incluant la subvention)."
-		remplassepile.text = "Le coût de remplacement des piles est de: \(x.batterie)$"
-		essence100.text =  "\(x.TotalGaz100)$ sur 100km"
-		elec100.text = "\(x.TotalElec100)$ sur 100km"
-		esstotal.text = "\(x.TotalGaz8years)$ sur 8ans"
-		electotal.text = "\(x.TotalElec8years)$ sur 8ans"
+		depessence.text = "Vous dépenserez \(String(format:"%.2f", x.TotalGaz8years))$ sur l'essence"
+		depenceelec.text = "Vous dépenserez \(String(format: "%.2f", x.TotalElec8years))$ sur l'électricité"
+		achatelec.text = "Vous allez dépenser \(String(format: "%.2f", x.delta))$ de plus pour acheter une voiture électrique(incluant la subvention)."
+		remplassepile.text = "Le coût de remplacement des piles est de: \(String(format: "%.2f", x.batterie))$"
+		essence100.text =  "\(String(format: "%.2f", x.TotalGaz100))$ sur 100km"
+		elec100.text = "\(String(format: "%.2f", x.TotalElec100))$ sur 100km"
+		esstotal.text = "\(String(format: "%.2f", x.TotalGaz8years))$ sur 8ans"
+		electotal.text = "\(String(format: "%.2f", x.TotalElec8years))$ sur 8ans"
 		
 	}
 
