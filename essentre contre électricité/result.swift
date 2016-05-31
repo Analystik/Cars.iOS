@@ -48,7 +48,6 @@ class Result: UIViewController {
 		return currencyFormatter
 	}
 
-	
 	func kmFormat() -> NSFormatter {
 		let kmFormatter = NSNumberFormatter()
 		kmFormatter.usesGroupingSeparator = true
@@ -57,5 +56,4 @@ class Result: UIViewController {
 		
 		return kmFormatter
 	}
-
 }
