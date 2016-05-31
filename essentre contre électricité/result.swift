@@ -14,27 +14,30 @@ class Result: UIViewController {
 	@IBOutlet var elec100: UILabel!
 	@IBOutlet var esstotal: UILabel!
 	@IBOutlet var electotal: UILabel!
+	@IBOutlet var millage: UILabel!
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		
 		let myformat = currencyFormat()
-
+		let kiloFormat = kmFormat()
+		
 		let finEvaluation = api.calculate(Profil(carId: CurrentValue.car, kmPerYear: KmCurrent.km, provinceId: CurrentValue.province))
 		
 		depessence.text = "Vous dépenserez \(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) sur l'essence"
-		depenceelec.text = "Vous dépenserez \(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesIn8Years)!) sur l'électricité"
+		depenceelec.text = "Vous dépenserez \(myformat.stringForObjectValue(finEvaluation.electricityConsomptionIn8Years)!) sur l'option électrique"
 		achatelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.deltaPrice)!) de plus pour acheter une voiture électrique (incluant la subvention)."
 		remplassepile.text = "Le coût de remplacement des piles est de: \(myformat.stringForObjectValue(finEvaluation.batteryExpenses)!)"
-		essence100.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesPer100km)!) sur 100km"
-		elec100.text = "\(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesPer100km)!) sur 100km"
-		esstotal.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) sur 8ans"
-		electotal.text = "\(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesIn8Years)!) sur 8ans"
+		essence100.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesPer100km)!)"
+		elec100.text = "\(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesPer100km)!)"
+		esstotal.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!)"
+		electotal.text = "\(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesIn8Years)!)"
+		millage.text = "\(kiloFormat.stringForObjectValue(finEvaluation.millageIn8Years)!)km:"
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+	}
 	
 	func currencyFormat() -> NSFormatter {
 		let currencyFormatter = NSNumberFormatter()
@@ -44,4 +47,15 @@ class Result: UIViewController {
 		
 		return currencyFormatter
 	}
+
+	
+	func kmFormat() -> NSFormatter {
+		let kmFormatter = NSNumberFormatter()
+		kmFormatter.usesGroupingSeparator = true
+		kmFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
+		kmFormatter.locale = NSLocale(localeIdentifier: "fr_CA")
+		
+		return kmFormatter
+	}
+
 }
