@@ -31,12 +31,12 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
 		provinces = api.getProvinces()
 	}
 	
-	func modifyContaint(button: UIButton, containt: Array<Make>) {
+	func modifyContaintMakes(button: UIButton, containt: Array<Make>) {
 		self.containt = containt
 		self.selectedbutton = button
 	}
 	
-	func modifyContaintModel(button: UIButton,containt: Array<Model>) {
+	func modifyContaintModels(button: UIButton,containt: Array<Model>) {
 		self.containt = containt
 		self.selectedbutton = button
 	}
@@ -46,7 +46,7 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
 		self.selectedbutton = button
 	}
 	
-	func modifyContaintProvince(button: UIButton,containt: Array<Province>) {
+	func modifyContaintProvinces(button: UIButton,containt: Array<Province>) {
 		self.containt = containt
 		self.selectedbutton = button
 	}

@@ -21,14 +21,14 @@ class form_page: UIViewController {
 	@IBOutlet var button: UIButton!
 	
 	@IBAction func btnMarqueClick(sender: UIButton) {
-		dropdownControl.modifyContaint(btnMarque, containt: dropdownControl.makes)
+		dropdownControl.modifyContaintMakes(btnMarque, containt: dropdownControl.makes)
 		dropdownControl.showPickerview(dropdown)
 		btnModele.setTitle("Choisir un modèle", forState: UIControlState.Normal)
 		btnYear.setTitle("Choisir une année", forState: UIControlState.Normal)
 	}
 	
 	@IBAction func btnModeleClick(sender: UIButton) {
-		dropdownControl.modifyContaintModel(btnModele, containt: dropdownControl.models)
+		dropdownControl.modifyContaintModels(btnModele, containt: dropdownControl.models)
 		dropdownControl.showPickerview(dropdown)
 		btnYear.setTitle("Choisir une année", forState: UIControlState.Normal)
 	}
@@ -39,7 +39,7 @@ class form_page: UIViewController {
 	}
 	
 	@IBAction func btnProvinceClick(sender: UIButton!) {
-		dropdownControl.modifyContaintProvince(btnProvince, containt: dropdownControl.provinces)
+		dropdownControl.modifyContaintProvinces(btnProvince, containt: dropdownControl.provinces)
 		dropdownControl.showPickerview(dropdown)
 	}
 	
