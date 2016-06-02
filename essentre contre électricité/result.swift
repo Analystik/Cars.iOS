@@ -24,10 +24,10 @@ class Result: UIViewController {
 		
 		let finEvaluation = api.calculate(Profil(carId: CurrentValue.car, kmPerYear: KmCurrent.km, provinceId: CurrentValue.province))
 		
-		depessence.text = "Vous dépenserez \(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) sur l'essence"
-		depenceelec.text = "Vous dépenserez \(myformat.stringForObjectValue(finEvaluation.electricityConsomptionIn8Years)!) sur l'option électrique"
-		achatelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.deltaPrice)!) de plus pour acheter une voiture électrique (incluant la subvention)."
-		remplassepile.text = "Le coût de remplacement des piles est de: \(myformat.stringForObjectValue(finEvaluation.batteryExpenses)!)"
+		depessence.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) en essence."
+		depenceelec.text = "Vous allez dépenser\(myformat.stringForObjectValue(finEvaluation.electricityConsomptionIn8Years)!) en électricité."
+		achatelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.deltaPrice)!) de plus en achetant une voiture électrique."
+		remplassepile.text = "Le coût estimé pour le remplacement de la batterie est: \(myformat.stringForObjectValue(finEvaluation.batteryExpenses)!)"
 		essence100.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesPer100km)!)"
 		elec100.text = "\(myformat.stringForObjectValue(finEvaluation.electricityTotalExpensesPer100km)!)"
 		esstotal.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!)"
