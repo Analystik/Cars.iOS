@@ -25,7 +25,7 @@ class Result: UIViewController {
 		let finEvaluation = api.calculate(Profil(carId: CurrentValue.car, kmPerYear: KmCurrent.km, provinceId: CurrentValue.province))
 		
 		depessence.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) en essence."
-		depenceelec.text = "Vous allez dépenser\(myformat.stringForObjectValue(finEvaluation.electricityConsomptionIn8Years)!) en électricité."
+		depenceelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.electricityConsomptionIn8Years)!) en électricité."
 		achatelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.deltaPrice)!) de plus en achetant une voiture électrique."
 		remplassepile.text = "Le coût estimé pour le remplacement de la batterie est: \(myformat.stringForObjectValue(finEvaluation.batteryExpenses)!)"
 		essence100.text = "\(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesPer100km)!)"

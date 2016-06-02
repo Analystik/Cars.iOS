@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "50AF94CC1CEB720000C31489"
-               BuildableName = "essentre contre e&#x301;lectricite&#x301;.app"
-               BlueprintName = "essentre contre e&#x301;lectricite&#x301;"
-               ReferencedContainer = "container:essentre contre e&#x301;lectricite&#x301;.xcodeproj">
+               BuildableName = "Cars.ios.app"
+               BlueprintName = "Cars.ios"
+               ReferencedContainer = "container:Cars.ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50AF94CC1CEB720000C31489"
-            BuildableName = "essentre contre e&#x301;lectricite&#x301;.app"
-            BlueprintName = "essentre contre e&#x301;lectricite&#x301;"
-            ReferencedContainer = "container:essentre contre e&#x301;lectricite&#x301;.xcodeproj">
+            BuildableName = "Cars.ios.app"
+            BlueprintName = "Cars.ios"
+            ReferencedContainer = "container:Cars.ios.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50AF94CC1CEB720000C31489"
-            BuildableName = "essentre contre e&#x301;lectricite&#x301;.app"
-            BlueprintName = "essentre contre e&#x301;lectricite&#x301;"
-            ReferencedContainer = "container:essentre contre e&#x301;lectricite&#x301;.xcodeproj">
+            BuildableName = "Cars.ios.app"
+            BlueprintName = "Cars.ios"
+            ReferencedContainer = "container:Cars.ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50AF94CC1CEB720000C31489"
-            BuildableName = "essentre contre e&#x301;lectricite&#x301;.app"
-            BlueprintName = "essentre contre e&#x301;lectricite&#x301;"
-            ReferencedContainer = "container:essentre contre e&#x301;lectricite&#x301;.xcodeproj">
+            BuildableName = "Cars.ios.app"
+            BlueprintName = "Cars.ios"
+            ReferencedContainer = "container:Cars.ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

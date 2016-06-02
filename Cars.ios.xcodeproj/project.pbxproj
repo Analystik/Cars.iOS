@@ -26,7 +26,7 @@
 		5062E4E21CF4DCA000B60E98 /* apiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = apiResult.swift; path = ../apiResult.swift; sourceTree = "<group>"; };
 		5062E4E41CF4E41500B60E98 /* PVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PVController.swift; path = ../PVController.swift; sourceTree = "<group>"; };
 		509CEE8B1CF74C57007E1250 /* carModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = carModel.swift; path = ../carModel.swift; sourceTree = "<group>"; };
-		50AF94CD1CEB720000C31489 /* essentre contre électricité.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "essentre contre électricité.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AF94CD1CEB720000C31489 /* Cars.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cars.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AF94D01CEB720000C31489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AF94D21CEB720000C31489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50AF94D71CEB720000C31489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		50AF94CE1CEB720000C31489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50AF94CD1CEB720000C31489 /* essentre contre électricité.app */,
+				50AF94CD1CEB720000C31489 /* Cars.ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50AF94CC1CEB720000C31489 /* essentre contre électricité */ = {
+		50AF94CC1CEB720000C31489 /* Cars.ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50AF94DF1CEB720000C31489 /* Build configuration list for PBXNativeTarget "essentre contre électricité" */;
+			buildConfigurationList = 50AF94DF1CEB720000C31489 /* Build configuration list for PBXNativeTarget "Cars.ios" */;
 			buildPhases = (
 				50AF94C91CEB720000C31489 /* Sources */,
 				50AF94CA1CEB720000C31489 /* Frameworks */,
@@ -97,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = "essentre contre électricité";
+			name = Cars.ios;
 			productName = "essentre contre électricité";
-			productReference = 50AF94CD1CEB720000C31489 /* essentre contre électricité.app */;
+			productReference = 50AF94CD1CEB720000C31489 /* Cars.ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50AF94C81CEB720000C31489 /* Build configuration list for PBXProject "essentre contre électricité" */;
+			buildConfigurationList = 50AF94C81CEB720000C31489 /* Build configuration list for PBXProject "Cars.ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50AF94CC1CEB720000C31489 /* essentre contre électricité */,
+				50AF94CC1CEB720000C31489 /* Cars.ios */,
 			);
 		};
 /* End PBXProject section */
@@ -277,7 +277,7 @@
 				INFOPLIST_FILE = "essentre contre électricité/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.analystik.essentre-contre-e-lectricite-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cars.ios;
 			};
 			name = Debug;
 		};
@@ -288,14 +288,14 @@
 				INFOPLIST_FILE = "essentre contre électricité/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.analystik.essentre-contre-e-lectricite-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cars.ios;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50AF94C81CEB720000C31489 /* Build configuration list for PBXProject "essentre contre électricité" */ = {
+		50AF94C81CEB720000C31489 /* Build configuration list for PBXProject "Cars.ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50AF94DD1CEB720000C31489 /* Debug */,
@@ -304,7 +304,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50AF94DF1CEB720000C31489 /* Build configuration list for PBXNativeTarget "essentre contre électricité" */ = {
+		50AF94DF1CEB720000C31489 /* Build configuration list for PBXNativeTarget "Cars.ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50AF94E01CEB720000C31489 /* Debug */,
