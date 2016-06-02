@@ -4,7 +4,7 @@
 import UIKit
 
 struct KmCurrent {
-	static var km = 0
+	static var km = 10000
 }
 
 class form_page: UIViewController {
