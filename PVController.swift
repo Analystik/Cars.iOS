@@ -26,6 +26,7 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
 		ui.dropdown.delegate = self;
 		ui.dropdown.dataSource = self;
 		ui.dropdown.hidden = true;
+
 		
 		makes = api.getMakes()
 		provinces = api.getProvinces()
@@ -96,5 +97,6 @@ class mydropdownControl: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
 		
 		selectedbutton.setTitle(value.title(), forState: UIControlState.Normal)
 		pickerView.hidden = true
+
 	}
 }

@@ -41,22 +41,20 @@ class form_page: UIViewController {
 	@IBAction func btnProvinceClick(sender: UIButton!) {
 		dropdownControl.modifyContaintProvinces(btnProvince, containt: dropdownControl.provinces)
 		dropdownControl.showPickerview(dropdown)
+		if needToHide() {
+			button.hidden = false
+		}
 	}
 	
 	@IBAction func sliderValuechanged(sender: UISlider) {
 		KmCurrent.km = Int(sender.value);
 		resultKmYear.text = "\(KmCurrent.km)"+"km";
-		
-		if needToHide() {
-			button.hidden = false
-		}
 	}
 	
 	func needToHide() -> Bool {
 		return btnMarque.currentTitle != "Choisir une marque"
 			&& btnModele.currentTitle != "Choisir un modèle"
 			&& btnYear.currentTitle != "Choisir une année"
-			&& btnProvince.currentTitle != "Choisir une province"
 	}
 
 	override func viewDidLoad() {

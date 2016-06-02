@@ -145,6 +145,7 @@ class FinancialEvaluation{
 	var gasTotalExpensesIn8Years:Double = 9.99
 	var gasTotalExpensesPer100km = 9.99
 	var millageIn8Years = 9.99
+	var electricityconsumptionexpensesin8years = 9.99
 
 	init(){
 	}
@@ -184,6 +185,9 @@ class FinancialEvaluation{
 		
 		if let bat = json["MileageIn8Years"] as? Double{
 			self.millageIn8Years = bat
+		}
+		if let bat = json["ElectricityConsumptionExpensesIn8Years"] as? Double{
+			self.electricityconsumptionexpensesin8years = bat
 		}
 	}
 }
