@@ -19,6 +19,13 @@ class form_page: UIViewController {
 	@IBOutlet var resultKmYear: UILabel!
 	@IBOutlet var dropdown: UIPickerView!
 	@IBOutlet var button: UIButton!
+    
+    
+    var pvMakesDataSource: pvDataSource!
+    var pvModelsDataSource: pvDataSource!
+    var pvCarsDataSource: pvDataSource!
+    var pvProvinceDataSource: pvDataSource!
+    
 	
 	@IBAction func btnMarqueClick(sender: UIButton) {
 		dropdownControl.modifyContaintMakes(btnMarque, containt: dropdownControl.makes)

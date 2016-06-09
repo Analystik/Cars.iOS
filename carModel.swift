@@ -3,6 +3,18 @@
 
 import Foundation
 
+
+extension Array where Element: HasTitle {
+
+    func ToDictionary() -> Dictionary<Int, String> {
+        var d = Dictionary<Int,String>()
+        for ele in self {
+            d[ele.id] = ele.title()
+        }
+        return d
+    }
+}
+
 protocol HasTitle{
 	var id: Int! {get}
 	func title() -> String

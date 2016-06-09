@@ -16,6 +16,7 @@
 		50AF94D81CEB720000C31489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AF94D71CEB720000C31489 /* Assets.xcassets */; };
 		50AF94DB1CEB720000C31489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AF94D91CEB720000C31489 /* LaunchScreen.storyboard */; };
 		50B42BD31CECAD2600D8C539 /* form_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B42BD21CECAD2600D8C539 /* form_page.swift */; };
+		A4915C241D0A206600465E4A /* pvDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4915C231D0A206600465E4A /* pvDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		50AF94DA1CEB720000C31489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50AF94DC1CEB720000C31489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B42BD21CECAD2600D8C539 /* form_page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = form_page.swift; sourceTree = "<group>"; };
+		A4915C231D0A206600465E4A /* pvDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pvDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				50AF94D71CEB720000C31489 /* Assets.xcassets */,
 				50AF94D91CEB720000C31489 /* LaunchScreen.storyboard */,
 				50AF94DC1CEB720000C31489 /* Info.plist */,
+				A4915C231D0A206600465E4A /* pvDataSource.swift */,
 			);
 			path = "essentre contre électricité";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				509CEE8C1CF74C57007E1250 /* carModel.swift in Sources */,
 				5062E4E31CF4DCA000B60E98 /* apiResult.swift in Sources */,
+				A4915C241D0A206600465E4A /* pvDataSource.swift in Sources */,
 				50B42BD31CECAD2600D8C539 /* form_page.swift in Sources */,
 				501BF0891CEE556F001C111E /* result.swift in Sources */,
 				50AF94D11CEB720000C31489 /* AppDelegate.swift in Sources */,
