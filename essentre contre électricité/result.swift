@@ -15,6 +15,8 @@ class Result: UIViewController {
 	@IBOutlet var esstotal: UILabel!
 	@IBOutlet var electotal: UILabel!
 	@IBOutlet var millage: UILabel!
+    
+    var currentProfil: Profil!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,7 +24,7 @@ class Result: UIViewController {
 		let myformat = currencyFormat()
 		let kiloFormat = kmFormat()
 		
-		let finEvaluation = api.calculate(Profil(carId: CurrentValue.car, kmPerYear: KmCurrent.km, provinceId: CurrentValue.province))
+		let finEvaluation = api.calculate(self.currentProfil)
 		
 		depessence.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.gasTotalExpensesIn8Years)!) en essence."
 		depenceelec.text = "Vous allez dépenser \(myformat.stringForObjectValue(finEvaluation.electricityconsumptionexpensesin8years)!) en électricité."
