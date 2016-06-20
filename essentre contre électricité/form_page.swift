@@ -3,9 +3,7 @@
 
 import UIKit
 
-struct KmCurrent {
-	static var km = 10000
-}
+
 
 class form_page: UIViewController, pvDelegate {
 	var api: ApiResult = ApiResult()
