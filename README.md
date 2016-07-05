@@ -1,29 +1,5 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Application iOS pour calculer la différence de coût pour différentes voitures fonctionnant au gas vs une voiture électrique standard. Cette demo a été créé pour la présentation "Voyez grand en codant petit" au groupe [MSDEVMTL](http://www.meetup.com/msdevmtl/events/223840239/).
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Version [Microsoft .NET C# UWP](https://github.com/Analystik/Cars) et [Android](https://github.com/Analystik/Cars.Android) aussi disponible.
